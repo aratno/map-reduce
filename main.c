@@ -5,9 +5,8 @@ int INPUT_SIZE     = 3;
 int INPUT_VECTOR[] = {0, 10, 12};
 
 void print_items(int* items, int size) {
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < size; i++)
         printf("%d ", items[i]);
-    }
 
     printf("\n");
 }
@@ -16,9 +15,8 @@ int* map(int* items, int size, int (*f)(int)) {
 
     int* start = malloc(sizeof(int) * size);
 
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < size; i++)
         start[i] = f(items[i]);
-    }
 
     return start;
 }
@@ -26,9 +24,8 @@ int* map(int* items, int size, int (*f)(int)) {
 int reduce(int* items, int size, int (*agg)(int, int), int initial) {
     int result = initial;
 
-    for(int i = 0; i < size; i++) {
+    for(int i = 0; i < size; i++)
         result = agg(result, items[i]);
-    }
 
     return result;
 }
