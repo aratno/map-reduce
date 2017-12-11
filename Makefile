@@ -1,7 +1,7 @@
 build :
 	gcc -o main.out -Wall main.c 
 
-run :
+run : build
 	./main.out
 
 clean :
